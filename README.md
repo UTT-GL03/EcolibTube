@@ -28,3 +28,6 @@ Le partage de vidéo a une utilité sociale conséquente puisqu'elle permet d'ac
  - Divertissement
 
 L'accès libre à l'information et au savoir est essentielle pour la démocratie.
+
+## Effets de la numérisation
+
