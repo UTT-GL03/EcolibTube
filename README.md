@@ -4,7 +4,7 @@ React application of a video hosting service like *Youtube* for an universitary 
 
 ## Choix du sujet
 
-Personnellement, Youtube (https://www.youtube.com) fait entièrement partie de notre quotidien. <br>
+Personnellement, [Youtube](https://www.youtube.com) fait entièrement partie de notre quotidien. <br>
 Nous nous en servons pour nous divertir (gaming, humour, storytelling, ...), mais également pour nous informer et aussi apprendre de nombreuses choses (tuto, veille technologique, ...). <br>
 De ce fait, pour nous, Youtube a entièrement remplacé la traditionnelle télévision (nous n'en avons même pas) et nous pensons que plus le temps va passer plus la télévision perdra des "places de marché" face aux médias du web comme Youtube (son existence devient de plus en plus importante dans nos vies).
 
