@@ -31,3 +31,8 @@ L'accès libre à l'information et au savoir est essentielle pour la démocratie
 
 ## Effets de la numérisation
 
+De prime abord, le remplacement de la consommation médias de la Télévision vers Youtube était catastrophique du fait que la Télévision était mine de rien assez écologique fonctionnant avec les ondes radios et antenne. Cependant, depuis de nombreuses années l'usage des foyers de la télévision a drastiquement changé ne passant plus par des ondes mais par leur box internet et devenons donc similaires à Youtube en coût de bande passante pour la diffusion de vidéos.
+
+En revanche, si l'on considère Youtube a une substitution à l'achat/location de dvd/cd pour des films/séries ..., alors effectivement Youtube se voit beaucoup plus mauvais pour l'environnement. Cependant, le secteur du support physique est aujourd'hui extrêmement limité voir quasiment mort (avant même Youtube), donc même si Youtube venait à disparaître, il est possible qu'il laisse juste un vide plutôt que d'être remplacé par ce secteur.
+
+- [Impact écologie du support vidéo physique (CD/DVD)](https://www.telecom-paris.fr/streaming-dvd-bilan-carbone)
