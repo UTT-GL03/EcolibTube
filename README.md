@@ -2,6 +2,11 @@
 
 React application of a video hosting service like *Youtube* for an universitary course (GL03) with eco-conception as main focus.
 
+```
+Groupe EcolibTub
+Florian LOPITAUX & Gabriel DOSNE
+```
+
 ## Choix du sujet
 
 Personnellement, [Youtube](https://www.youtube.com) fait entièrement partie de notre quotidien. <br>
