@@ -9,7 +9,7 @@ Florian LOPITAUX & Gabriel DOSNE
 
 ---
 
-## 2ème Séance : Choisir
+## 2ème Séance : Impact et utilité
 
 #### Choix du sujet
 
