@@ -50,8 +50,8 @@ En revanche, si l'on considère Youtube a une substitution à l'achat/location d
 
 ## 3ème séance : Scénarios d'usage et impacts
 
-Toutes les vidéos doivent être regardés en **qualité 720p HD** (qualité plutôt standard plutôt courante pour le web) pendant une **durée de 5 minutes**.
-Il faut donc choisir des vidéos de **minimum 8~9min** (pour le pré-téléchargement des vidéos fait au fur et à mesure par le site).
+Toutes les vidéos doivent être regardés en **qualité 720p HD** (qualité plutôt standard plutôt courante pour le web) pendant une **durée de 2 minutes**.
+Il faut donc choisir des vidéos de **minimum 5min** (pour le pré-téléchargement des vidéos fait au fur et à mesure par le site).
 
 #### Scénario : "Regarde des vidéos que lui recommande la plateforme"
 - L'utilisateur se rend sur la page d'accueil du site (donc sans passer par un moteur de recherche). Si nécessaire, il donne son consentement.
