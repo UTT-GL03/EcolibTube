@@ -85,3 +85,6 @@ Nous avons choisi de comparer l'impact des scénarios sur les services d'héberg
 
 Tab.1 : Mesure de l'EcoIndex moyen de services d'hébergement de vidéo.
 
+Comme on pouvait s'y attendre les résultats des plateformes sont mauvais, en effet l'hébergement et la diffusion de vidéos sont extrêmement coûteux d'un point de vue environnemental.
+
+Cependant, on observe quand même que Peertube obtient un score et une note bien supérieurs à ces deux concurrents. Ce constat peut notamment s'expliquer par la différence de philosophie des plateformes. PeerTube est un logiciel libre développé par Framasoft et a un modèle économique basé sur la donation et le financement participatif alors que Youtube et Bilibili eux sont des entreprises qui de par leur modèle économique, intègrent de nombreuses fonctionnalités sur leurs plateformes qui ont un impact écologique (publicité, tracker, données personnelles, algorithme de recommandation, ...)
