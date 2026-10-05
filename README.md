@@ -66,3 +66,22 @@ Il faut donc choisir des vidéos de **minimum 5min** (pour le pré-téléchargem
 - Il choisit une des vidéos proposés et la regarde.
 - Il revient en arrière sur les vidéos proposés pour son thème.
 - Il choisit une autre vidéo et la regarde.
+
+## 4ème séance : Impact de l'exécution des scénarios auprès de différents services concurrents
+
+L'EcoIndex d'une page (de A à G) est calculé (sources : [EcoIndex](https://www.ecoindex.fr/comment-ca-marche/), [Octo](https://blog.octo.com/sous-le-capot-de-la-mesure-ecoindex), [GreenIT](https://github.com/cnumr/GreenIT-Analysis/blob/acc0334c712ba68939466c42af1514b5f448e19f/script/ecoIndex.js#L19-L44)) en fonction du positionnement de cette page parmi les pages mondiales concernant :
+
+- le nombre de requêtes lancées,
+- le poids des téléchargements,
+- le nombre d'éléments du document.
+
+Nous avons choisi de comparer l'impact des scénarios sur les services d'hébergement de vidéo les plus utilisés : **YouTube**, **BiliBili** et **PeerTube** qui n'est pas parmis les plus utilisé mais qui est une option open source et décentralisé.
+
+| Service | Score (sur 100) | Classe | Détail des mesures
+| --- | --: | --: | --:
+| YouTube | 0 | E 🟥 | […](./benchmark/youtube.csv)
+| BiliBili | 0 | D 🟧 |  […](./benchmark/bilibili.csv)
+| PeerTube | 0 | E 🟥 | […](./benchmark/peertubetv.csv)
+
+Tab.1 : Mesure de l'EcoIndex moyen de services d'hébergement de vidéo.
+
