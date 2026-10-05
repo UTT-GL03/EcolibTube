@@ -80,7 +80,7 @@ Nous avons choisi de comparer l'impact des scénarios sur les services d'héberg
 | Service | Score (sur 100) | Classe | Détail des mesures
 | --- | --: | --: | --:
 | YouTube | 4,675 | G 🟥 | […](./benchmark/youtube_scenario_1_2.csv)
-| BiliBili | 0 | . 🟥 |  […](./benchmark/bilibili_scenario_1.csv) […](./benchmark/bilibili_scenario_2.csv)
+| BiliBili | 4,93 | G 🟥 |  […](./benchmark/bilibili_scenario_1.csv) […](./benchmark/bilibili_scenario_2.csv)
 | PeerTube | 19,425 | F 🟧 | […](./benchmark/peertube_scenario_1_2.csv)
 
 Tab.1 : Mesure de l'EcoIndex moyen de services d'hébergement de vidéo.
