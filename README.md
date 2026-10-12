@@ -111,16 +111,25 @@ L'étude de l'offre des services de VOD nous a permis d'identifier les sources d
 1. La principale source de revenu pour ces services provient de publicité.
 2. Certains services on également la possibilité de contracter un abonnement pour avoir des fonctionnalité supplémentaire sur la plateforme.
 
-| Source possible de revenus | Montant unitaire | Quantité nécessaire pour financer un salaire[^salaire]
+Maintenant que nous avons observer et comparé les différents modèles économiques, nous allons maintenant établir notre possible modèle. <br>
+Pour ce faire nous sommes parties d'un salaire médian français (3507€) à payer pour établir le nombre de "clients" que nous devions avoir.
+
+| Source possible de revenus | Montant unitaire | Quantité nécessaire pour financer un salaire
 | --- | --: | --:
-| Abonnement | 12€ [^abonnement] | 292
-| Affichage d'une publicité (régie tierce) | 0,00046€ [^RPM] | 7 623 913
-| Diffusion d'une publicité (régie intégrée) | 10 000€ [^encart] | 0,35
+| Abonnement particulier n°1 | 7,99€ *[mensuel]* | 439
+| Abonnement particulier n°2 | 13,99€ *[mensuel]* | 251
+| Abonnement professionnel n°1 | 95,99€ *[mensuel]* | 37
+| Abonnement professionnel n°2 | 1000€ *[annuel]* | 42
+| Boost de recommandation pour une vidéo | 1,99€ | 1753,5
 
-Tab. 3 : Source de revenus possibles pour le service d'un quotidien national.
+Tab. 3 : Source de revenus possibles pour notre plateforme d'hébergement de vidéos
 
-Par conséquent, pour réduire l'impact écologique du service, nous proposons de :
+Exemple type : Pour un salairé coût total employeur (3507€/mois), on pourrait avoir :
 
-- de renoncer aux publicités gérées par une régie tierce,
-- d'adopter un modèle basé principalement sur les abonnements,
-- de le compléter par un bandeau publicitaire (pour les non abonnés) géré par une régie intégrée.
+- 35% abonnements particulier n°1  -> 153,6 abonnements
+- 25% abonnements particulier n°2  -> 62,6 abonnements
+- 10% abonnements pro n°1  -> 3,6 abonnements
+- 15% abonnements pro n°2  -> 6,3 abonnements
+- 5% options  -> 87,6 jour_boosté
+
+Ce modèle freemium permettra d'une part, d'éviter les publicités qui implique des scripts et tracker sur les pages qui alourdissent les pages web et dégradent notre impact écologique. Mais également une éco-conception directement dans les fonctionnalités de notre site web, car les utilisateurs seront limités par le nombre d'heures de vidéos qui peuvent uploader sur la plateforme par semaine (afin de limiter la surconsommation de médias).
