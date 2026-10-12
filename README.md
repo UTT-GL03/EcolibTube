@@ -132,4 +132,4 @@ Exemple type : Pour un salairé coût total employeur (3507€/mois), on pourrai
 - 15% abonnements pro n°2  -> 6,3 abonnements
 - 5% options  -> 87,6 jour_boosté
 
-Ce modèle freemium permettra d'une part, d'éviter les publicités qui implique des scripts et tracker sur les pages qui alourdissent les pages web et dégradent notre impact écologique. Mais également une éco-conception directement dans les fonctionnalités de notre site web, car les utilisateurs seront limités par le nombre d'heures de vidéos qui peuvent uploader sur la plateforme par semaine (afin de limiter la surconsommation de médias).
+Ce modèle freemium permettra d'une part, d'éviter les publicités qui implique des scripts et tracker sur les pages qui alourdissent les pages web et dégradent notre impact écologique. Mais également une éco-conception directement dans les fonctionnalités de notre site web, car les utilisateurs seront limités par le nombre d'heures de vidéos qu'ils peuvent uploader sur la plateforme par semaine (afin de limiter la surconsommation de médias).
