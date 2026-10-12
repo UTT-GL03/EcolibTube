@@ -88,3 +88,39 @@ Tab.1 : Mesure de l'EcoIndex moyen de services d'hébergement de vidéo.
 Comme on pouvait s'y attendre les résultats des plateformes sont mauvais, en effet l'hébergement et la diffusion de vidéos sont extrêmement coûteux d'un point de vue environnemental.
 
 Cependant, on observe quand même que Peertube obtient un score et une note bien supérieurs à ces deux concurrents. Ce constat peut notamment s'expliquer par la différence de philosophie des plateformes. PeerTube est un logiciel libre développé par Framasoft et a un modèle économique basé sur la donation et le financement participatif alors que Youtube et Bilibili eux sont des entreprises qui de par leur modèle économique, intègrent de nombreuses fonctionnalités sur leurs plateformes qui ont un impact écologique (publicité, tracker, données personnelles, algorithme de recommandation, ...)
+
+## Modèle économique
+
+Comme nous l'avons vu dans la section précédente, parmi les choix de conception ayant le plus d'impact environnemental, la plupart sont directement liés au modèle économique du service.
+C'est pourquoi il est nécessaire à ce stade d'analyser leur modèle économique et de définir notre propre modèle permettant une conception plus frugale.
+
+Pour ce qui est des modèles économiques des services numériques de vidéo à la demande (cf. Tab. 2 ), ils semblent s'être harmonisés autour d'un modèle dit "*freemium*" (de *free*, gratuit, et *premium*, supplément) :
+
+- un accès gratuit à pratiquement toutes les vidéos, financé par la publicité et le suivi,
+- un accès à des fonctionnalité supplémentaire (meilleures options de qualité, téléchargement de vidéo, vidéos exclusives etc.), sans publicité (ou moins), réservé aux abonnés.
+
+| Service | Visiteur anonyme | Abonné
+| --- | --- | ---
+| Youtube | <ul><li>Publicités (régie tierce)</li><li>Suivi</li></ul> | <ul><li>Téléchargement de vidéo</li><li>Pas de pub sur certaine vidéo</li><li>Meilleures options de qualité</li></ul> 
+| PeerTube | <ul><li>Accès à tout</ul> | / 
+
+Tab. 2 : Offre des services de VOD.
+
+L'étude de l'offre des services de VOD nous a permis d'identifier les sources de revenu communément utilisées (cf Tab. 2). Nous avons pu établir que :
+
+1. La principale source de revenu pour ces services provient de publicité.
+2. Certains services on également la possibilité de contracter un abonnement pour avoir des fonctionnalité supplémentaire sur la plateforme.
+
+| Source possible de revenus | Montant unitaire | Quantité nécessaire pour financer un salaire[^salaire]
+| --- | --: | --:
+| Abonnement | 12€ [^abonnement] | 292
+| Affichage d'une publicité (régie tierce) | 0,00046€ [^RPM] | 7 623 913
+| Diffusion d'une publicité (régie intégrée) | 10 000€ [^encart] | 0,35
+
+Tab. 3 : Source de revenus possibles pour le service d'un quotidien national.
+
+Par conséquent, pour réduire l'impact écologique du service, nous proposons de :
+
+- de renoncer aux publicités gérées par une régie tierce,
+- d'adopter un modèle basé principalement sur les abonnements,
+- de le compléter par un bandeau publicitaire (pour les non abonnés) géré par une régie intégrée.
