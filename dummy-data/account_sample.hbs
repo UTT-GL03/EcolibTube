@@ -1,0 +1,16 @@
+{
+  "account": [
+    {{#repeat min=30 max=50}}
+    {
+      "id": "{{guid}}",
+      "creator": "{{firstName}} {{lastName}}",
+      "register_date": "{{date '2006' '2027' 'YYYY-MM-DD hh:mm'}}",
+      "subscribre_count": {{int 1 100000}},
+      "is_subscribed": {{boolean}},
+      "videos": [
+        {{#repeat min=0 max=20}}"{{guid}}"{{/repeat}}
+      ]
+    }
+    {{/repeat}}
+  ]
+}

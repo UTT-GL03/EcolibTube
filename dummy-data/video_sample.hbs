@@ -1,0 +1,17 @@
+{
+  "video": [
+    {{#repeat min=20 max=30}}
+    {
+      "id": "{{guid}}",
+      "title": "{{lorem min=3 max=20}}",
+      "issued": "{{date '2006' '2027' 'YYYY-MM-DD hh:mm'}}",
+      "creator": "{{firstName}} {{lastName}}",
+      "description": "{{#repeat min=1 max=15 comma=false}}{{lorem min=5 max=120}}\n\n{{/repeat}}",
+      "views": {{int 1 10000000}},
+      "likes": {{int 1 10000}},
+      "dislikes": {{int 1 100}},
+      "user_rating": {{int -1 1}}
+    }
+    {{/repeat}}
+  ]
+}
