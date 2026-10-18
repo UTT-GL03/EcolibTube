@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
-import BuilderView from './views/BuilderView';
-import TrendingView from './views/TrendingView';
+import BuilderView from '@/views/BuilderView';
+import TrendingView from '@/views/TrendingView';
 
 function App() {
   return <>
