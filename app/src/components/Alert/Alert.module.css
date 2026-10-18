@@ -1,20 +1,45 @@
-.alert {
-    padding: 1rem;
+.alert[open] {
+    position: relative;
+    margin: 2rem auto;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
 
+    min-width: 30vw;
+
+    outline: none;
+    border: none;
     border-radius: 0.5vw;
     color: var(--bg-dark-color);
 }
 
-.dangerAlert {
+.alert::backdrop {
+  backdrop-filter: blur(4px);
+}
+
+.closeModalBtn {
+    cursor: pointer;
+    padding: 0.6rem 0.6rem;
+
+    position: absolute;
+    top: 5%;
+    right: 2%;
+
+    background: var(--bg-light-color);
+    border-radius: 0.2vw;
+    border: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.dangerAlert[open] {
     background-color: var(--danger-color);
 }
 
-.warningAlert {
+.warningAlert[open] {
     background-color: var(--warning-color);
 }
 
-.successAlert {
+.successAlert[open] {
     background-color: var(--success-color);
 }
