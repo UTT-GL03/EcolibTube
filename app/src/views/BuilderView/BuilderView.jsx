@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import styles from './BuilderView.module.css';
-import { Alert, ALERT_TYPES } from '../../components/Alert';
+import { Alert, ALERT_TYPES } from '@/components/Alert';
 
 
 function BuilderView() {
