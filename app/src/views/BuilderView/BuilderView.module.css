@@ -1,0 +1,98 @@
+/* :global() BAD PRACTICE ONLY FOR TESTS */
+:global(body) {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+:global(div#root) {
+    padding: 2vw 2vh;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+
+    background-color: var(--bg-color);
+    border-radius: 1vw;
+}
+
+.loremText {
+    color: var(--text-muted-color);
+}
+
+.btn {
+    cursor: pointer;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5vw;
+    font-weight: bold;
+}
+
+.colorSchemeBtn {
+    background-color: var(--bg-light-color);
+    color: var(--text-color);
+}
+
+.alertsBtn {
+    background-color: var(--primary-color);
+    color: var(--bg-dark-color);
+}
+
+.countBtn {
+    background-color: var(--secondary-color);
+    color: var(--bg-dark-color);
+}
+
+
+dialog[open] {
+    background-color: transparent;
+    color: var(--text-muted);
+    margin: 2rem auto;
+    border: none;
+    outline: none;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(4px);
+}
+
+.closeModalBtn {
+    cursor: pointer;
+    padding: 0.6rem 0.6rem;
+
+    align-self: flex-end;
+
+    background: var(--bg-light-color);
+    border-radius: 0.2vw;
+    border: none;
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.alert {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 0.5vw;
+    color: var(--bg-dark-color);
+}
+
+.dangerAlert {
+    background-color: var(--danger-color);
+}
+
+.warningAlert {
+    background-color: var(--warning-color);
+}
+
+.successAlert {
+    background-color: var(--success-color);
+}
