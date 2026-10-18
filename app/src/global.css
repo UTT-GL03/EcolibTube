@@ -38,7 +38,7 @@ body.light {
     --primary-color: hsl(221 49% 33%);
     --secondary-color: hsl(44 100% 14%);
     --danger-color: hsl(9 21% 41%);
-    --warning-color: hsl(52 23% 34%);
+    --warning-color: hsl(51, 64%, 40%);
     --success-color: hsl(147 19% 36%);
 }
 
