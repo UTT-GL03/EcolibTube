@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import styles from './BuilderView.module.css';
 
-// COMPONENTS
+import styles from './BuilderView.module.css';
 import { Alert, ALERT_TYPES } from '../../components/Alert';
 
 
@@ -23,7 +22,7 @@ function BuilderView() {
     }
 
     // RENDER
-    return <>
+    return <main className={styles.viewContainer}>
         <h1>Color Scheme Test</h1>
         <p className={styles.loremText}>Some Lorem ipsum you know just simple placeholder to fill</p>
 
@@ -38,7 +37,7 @@ function BuilderView() {
         <Alert id="alert1" alertType={ALERT_TYPES.DANGER} title="Payment failed" text="Your bank account has rejected the payment."/>
         <Alert id="alert2" alertType={ALERT_TYPES.WARNING} title="Plan expiring soon" text="Your plan will expire in 3 days."/>
         <Alert id="alert3" alertType={ALERT_TYPES.SUCCESS} title="Video Uploaded" text="Your video has been successfully uploaded on the platform."/>
-    </>
+    </main>
 }
 
 export default BuilderView

@@ -1,13 +1,9 @@
-/* :global() BAD PRACTICE ONLY FOR TESTS */
-:global(body) {
-    min-height: 100vh;
+.viewContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-:global(div#root) {
     padding: 2vw 2vh;
 
     display: flex;
@@ -43,35 +39,4 @@
 .countBtn {
     background-color: var(--secondary-color);
     color: var(--bg-dark-color);
-}
-
-
-dialog[open] {
-    background-color: transparent;
-    color: var(--text-muted);
-    margin: 2rem auto;
-    border: none;
-    outline: none;
-    position: relative;
-
-    display: flex;
-    flex-direction: column;
-    gap: 2vh;
-}
-
-dialog::backdrop {
-  backdrop-filter: blur(4px);
-}
-
-.closeModalBtn {
-    cursor: pointer;
-    padding: 0.6rem 0.6rem;
-
-    align-self: flex-end;
-
-    background: var(--bg-light-color);
-    border-radius: 0.2vw;
-    border: none;
-    color: var(--text-color);
-    font-weight: bold;
 }
