@@ -1,16 +1,42 @@
-# React + Vite
+# EcolibTube Application (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Welcome on the EcolibTube React application !
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+To start the project, first you have to install the dependencies with the following command :
 
-## React Compiler
+```bash
+npm install
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Then, once the dependencies have finished to be downloaded. You can easily run the app with :
 
-## Expanding the Oxlint configuration
+```bash
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Development
+
+The application provide units and integrations tests for components.
+Each tests will be executed on a simulation of **Chromium**, **Firefox** and **Safari** to also test the compatibility.
+
+If you want to run the tests, you have to install before additional dependencies with :
+
+```bash
+npx playwright install
+```
+
+Now, you can run all tests with the following command :
+
+```bash
+npm run test
+```
+
+## Tech Stack & Details
+
+- **Developed by :** Florian Lopitaux & Gabriel DOSNE
+- **Programming Languages :** Javascript, HTML, CSS
+- **Frameworks used :** React, Vite, Playwright
+- **Database :** Apache CouchDB (NoSQL)
+
