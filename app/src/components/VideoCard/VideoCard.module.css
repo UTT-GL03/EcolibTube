@@ -1,0 +1,66 @@
+.videoCard {
+    cursor: pointer;
+
+    padding: 1rem;
+    width: clamp(300px, 20vw, 500px);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    border-radius: 1rem;
+}
+
+.videoCard:hover {
+    background-color: var(--bg-light-color);
+}
+
+.videoScreenshot {
+    width: 100%;
+    height: auto;
+
+    border-radius: 2rem;
+}
+
+.videoCaption {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.creatorPhotoProfil {
+    width: 20%;
+    height: auto;
+
+    border-radius: 50%;
+}
+
+.videoInfoDesc {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.videoTitle {
+    margin-bottom: .5rem;
+    width: 100%;
+    font-size: small;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.creatorName {
+    font-size: .8rem;
+}
+
+.videoViews {
+    margin-right: 1vw;
+    font-size: .8rem;
+}
