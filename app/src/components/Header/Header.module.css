@@ -1,0 +1,52 @@
+.header {
+    overflow: hidden;
+    background-color: var(--bg-dark-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header input[type=text] {
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+}
+
+.header .searchContainer {
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.header .searchContainer button {
+    float: right;
+    padding: 6px;
+    /*margin-right: 16px;*/
+    background-color: var(--bg-light-color);
+    color: var(--text-color);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+.header .searchContainer button:hover {
+    background: var(--highlight-color);
+}
+
+.burgerMenu {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 12px;
+}
+
+.burgerMenu:hover {
+    background-color: var(--bg-light-color);
+}
+
+.profileButton {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 12px;
+}
+
+.profileButton:hover {
+    background-color: var(--bg-light-color);
+}
