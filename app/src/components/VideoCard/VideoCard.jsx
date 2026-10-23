@@ -3,6 +3,13 @@ import styles from './VideoCard.module.css';
 import videosData from '@/services/dummy-data/videos.json';
 
 
+/**
+ * Component to create a Video card, composed by a video screenshot and some data like title, create, views
+ * 
+ * @param {string} idVideo The identifier of the video in the database 
+ * 
+ * @returns {JSX.Element}
+ */
 function VideoCard({idVideo}) {
     // FIELDS
     const video = videosData.video.find((item => item.id === idVideo));
@@ -20,17 +27,17 @@ function VideoCard({idVideo}) {
 
 
     // RENDER
-    return <div className={styles.videoCard}>
+    return <figure className={styles.videoCard}>
         <img className={styles.videoScreenshot} src='/assets/video-screenshot-example.jpg' alt=""/>
-        <div className={styles.videoCaption}>
+        <figcaption className={styles.videoCaption}>
             <img className={styles.creatorPhotoProfil} src='/assets/creator-pp-example.png' alt=""/>
             <div className={styles.videoInfoDesc}>
                 <h4 className={styles.videoTitle}>{video.title}</h4>
                 <span className={styles.creatorName}>{video.creator}</span>
                 <span className={styles.videoViews}>&#x1F441; {formatViews(video.views)}</span>
             </div>
-        </div>
-    </div>
+        </figcaption>
+    </figure>
 }
 
 export default VideoCard;

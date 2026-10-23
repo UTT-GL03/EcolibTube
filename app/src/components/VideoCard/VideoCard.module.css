@@ -11,6 +11,12 @@
     border-radius: 1rem;
 }
 
+@media (max-width: 660px) {
+    .videoCard {
+        width: 90%;
+    }
+}
+
 .videoCard:hover {
     background-color: var(--bg-light-color);
 }
