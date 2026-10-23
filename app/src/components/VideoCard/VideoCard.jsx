@@ -28,9 +28,11 @@ function VideoCard({idVideo}) {
 
     // RENDER
     return <figure className={styles.videoCard}>
-        <img className={styles.videoScreenshot} src='/assets/video-screenshot-example.jpg' alt=""/>
+        <img className={styles.videoScreenshot} src='/assets/video-screenshot-example.jpg' alt="video screenshot"/>
+
         <figcaption className={styles.videoCaption}>
-            <img className={styles.creatorPhotoProfil} src='/assets/creator-pp-example.png' alt=""/>
+            <img className={styles.creatorPhotoProfil} src='/assets/creator-pp-example.png' alt="video creator photo profil"/>
+
             <div className={styles.videoInfoDesc}>
                 <h4 className={styles.videoTitle}>{video.title}</h4>
                 <span className={styles.creatorName}>{video.creator}</span>

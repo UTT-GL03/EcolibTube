@@ -1,52 +1,97 @@
 .header {
-    overflow: hidden;
-    background-color: var(--bg-dark-color);
+    position: -webkit-sticky; /* Safari compatibility */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
+    padding: 1vh 1vw;
+    width: 100%;
+    background-color: var(--bg-color);
+    border-bottom: 2px solid var(--bg-light-color);
 }
 
-.header input[type=text] {
-    padding: 6px;
-    border: none;
-    font-size: 17px;
-}
+/* BUTTONS STYLE */
 
-.header .searchContainer {
-    margin-top: 6px;
-    margin-bottom: 6px;
-}
-
-.header .searchContainer button {
-    float: right;
-    padding: 6px;
-    /*margin-right: 16px;*/
-    background-color: var(--bg-light-color);
-    color: var(--text-color);
-    font-size: 17px;
-    border: none;
+.sidebarBtn {
     cursor: pointer;
+
+    width: min(60px, 10%);
+    background: none;
+    border: none;
+    transition: transform 0.3s ease;
 }
 
-.header .searchContainer button:hover {
-    background: var(--highlight-color);
+.sidebarBtn .burgerIcon {
+    width: 100%;
+    height: auto;
+
+    stroke: var(--text-color);
 }
 
-.burgerMenu {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: 12px;
+.profilBtn {
+    cursor: pointer;
+
+    width: min(60px, 10%);
+    background: none;
+    border: none;
+    transition: transform 0.3s ease;
 }
 
-.burgerMenu:hover {
+.profilBtn .profilPP {
+    width: 100%;
+    height: auto;
+}
+
+.sidebarBtn:hover, .profilBtn:hover, .searchBarSubmitBtn:hover {
+    transform: scale(1.1);
+}
+
+/* SEARCH BAR STYLE */
+
+.searchBarForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: min(600px, 70%);
     background-color: var(--bg-light-color);
+    border-radius: 1rem;
 }
 
-.profileButton {
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-right: 12px;
+.searchBarForm .searchBarInput {
+    width: 90%;
+    padding: 1vh 1rem;
+    background: none;
+    border: none;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    color: var(--text-color);
 }
 
-.profileButton:hover {
-    background-color: var(--bg-light-color);
+.searchBarForm .searchBarSubmitBtn {
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1vh 0;
+    width: max(68px, 10%);
+    background: none;
+    border: none;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.searchBarSubmitBtn .searchBarSubmitIcon {
+    width: 40%;
+    height: auto;
+    fill: var(--text-color);
+    flex-shrink: 0;
 }

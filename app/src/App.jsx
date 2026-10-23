@@ -1,13 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
-import { Header } from '@/components/Header';
+
+import Header from '@/components/Header';
 
 import BuilderView from '@/views/BuilderView';
 import TrendingView from '@/views/TrendingView';
 
 function App() {
   return <>
-    {/* TODO insert header component */}
     <Header />
+
     <Routes>
       <Route path="/" element={<BuilderView />} /> {/* route only during dev for testing components, redirect to /trending in prod env */}
 
