@@ -1,6 +1,7 @@
 import styles from './VideoCard.module.css';
 
 import videosData from '@/services/dummy-data/videos.json';
+import get_random_video_screenshot from '@/services/image';
 
 
 /**
@@ -28,7 +29,7 @@ function VideoCard({idVideo}) {
 
     // RENDER
     return <figure className={styles.videoCard}>
-        <img className={styles.videoScreenshot} src='/assets/video-screenshot-example.jpg' alt="video screenshot"/>
+        <img className={styles.videoScreenshot} src={get_random_video_screenshot()} alt="video screenshot"/>
 
         <figcaption className={styles.videoCaption}>
             <img className={styles.creatorPhotoProfil} src='/assets/creator-pp-example.png' alt="video creator photo profil"/>
