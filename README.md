@@ -155,7 +155,7 @@ __Fig.3__: Prototype de la page des tendances (mode sombre).
 
 Nous n'utilisont pas de framework mise à part React.
 
-Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du frontend.
+Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du frontend (en dehors du visionnage de vidéo).
 
 |   | EcoIndex| Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|--------------:|---------:|---------------------:
