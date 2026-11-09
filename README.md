@@ -133,3 +133,32 @@ Exemple type : Pour un salairé coût total employeur (3507€/mois), on pourrai
 - 5% options  -> 87,6 jour_boosté
 
 Ce modèle freemium permettra d'une part, d'éviter les publicités qui implique des scripts et tracker sur les pages qui alourdissent les pages web et dégradent notre impact écologique. Mais également une éco-conception directement dans les fonctionnalités de notre site web, car les utilisateurs seront limités par le nombre d'heures de vidéos qu'ils peuvent uploader sur la plateforme par semaine (afin de limiter la surconsommation de médias).
+
+## Implémentation du scénario prioritaire
+
+### Étape de prototypage : Données chargées de manière statique
+
+Pour cette première version du prototype (`v1.0.0`) :
+
+- l'échantillon de données est encore chargé dans le code de manière statique,
+- les fonctionnalités implémentées ne sont que celles nécessaires pour suivre le scénario prioritaire ("Regarde des vidéos que lui recommande la plateforme").
+
+### Page des tendances
+
+Nous avons développé la page des tendances (cf. Fig. 2) pour qu'elle affiche l'échantillon de données sous une forme proche de ce que prévoit notre maquette.
+
+![Prototype de la page des tendances (mode clair)](./readme-assets/trending_light.png)
+__Fig.2__: Prototype de la page des tendances (mode clair).
+
+![Prototype de la page des tendances (mode sombre)](./readme-assets/trending_dark.png)
+__Fig.3__: Prototype de la page des tendances (mode sombre).
+
+Nous n'utilisont pas de framework mise à part React.
+
+Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du frontend (en dehors du visionnage de vidéo).
+
+|   | EcoIndex| Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|--------------:|---------:|---------------------:
+| Page de tendances  | 69 C 🟩 | 192 | 34 | 35000
+
+__Tab.4__: Évaluation de l'impact du prototype de la page des tendances
