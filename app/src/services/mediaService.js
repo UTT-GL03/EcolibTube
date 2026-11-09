@@ -1,5 +1,5 @@
 export function getRandomVideoScreenshot() {
-    const screenshot_id = Math.floor(Math.random() * 10) + 1;
+    const screenshot_id = Math.floor(Math.random() * 9) + 1;
 
     return `/assets/video_screenshots/video-screenshot-example_${screenshot_id}.jpg`;
 }
