@@ -1,14 +1,12 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './VideoView.module.css';
-
-// import commentsData from '@/services/dummy-data/comments.json';
 
 import { getRandomVideoURL } from '@/services/mediaService';
 
 
 function VideoView({idVideo}) {
     // FIELDS
-    // const commentsCount = ;
+    const [comments, setComments] = useState([]);
 
     // RENDER
     return <main className={styles.viewContainer}>

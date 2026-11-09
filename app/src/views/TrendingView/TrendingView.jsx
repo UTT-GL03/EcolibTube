@@ -1,14 +1,23 @@
 import styles from './TrendingView.module.css';
 
-import videosData from '@/services/dummy-data/videos.json';
+import { useEffect, useState } from 'react';
 
 import VideoCard from '@/components/VideoCard';
 
 
 function TrendingView() {
+    const [videosData, setVideosData] = useState([]);
+
+    useEffect(() => {
+        fetch('/dummy-data/videos.json')
+            .then(data => data.json())
+            .then(data => setVideosData(data.video));
+    }, []);
+
+    // RENDER
     return <main className={styles.viewContainer}>
-        {videosData.video.map((video) => (
-            <VideoCard key={video.id} idVideo={video.id}/>
+        {videosData.map((video) => (
+            <VideoCard key={video.id} video={video}/>
         ))}
     </main>
 }

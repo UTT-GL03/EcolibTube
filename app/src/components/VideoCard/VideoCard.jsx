@@ -2,7 +2,6 @@ import styles from './VideoCard.module.css';
 
 import { useNavigate } from "react-router-dom";
 
-import videosData from '@/services/dummy-data/videos.json';
 import { getRandomVideoScreenshot } from '@/services/mediaService';
 
 
@@ -13,9 +12,8 @@ import { getRandomVideoScreenshot } from '@/services/mediaService';
  * 
  * @returns {JSX.Element}
  */
-function VideoCard({idVideo}) {
+function VideoCard({video}) {
     // FIELDS
-    const video = videosData.video.find((item => item.id === idVideo));
     const navigate = useNavigate();
 
     // FUNCTIONS
@@ -35,19 +33,19 @@ function VideoCard({idVideo}) {
 
 
     // RENDER
-    return <figure className={styles.videoCard} onClick={goToVideo}>
-        <img className={styles.videoScreenshot} src={getRandomVideoScreenshot()} alt="video screenshot"/>
+        return <figure className={styles.videoCard} onClick={goToVideo}>
+            <img className={styles.videoScreenshot} src={getRandomVideoScreenshot()} alt="video screenshot"/>
 
-        <figcaption className={styles.videoCaption}>
-            <img className={styles.creatorPhotoProfil} src='/assets/creator-pp-example.png' alt="video creator photo profil"/>
+            <figcaption className={styles.videoCaption}>
+                <img className={styles.creatorPhotoProfil} src='/assets/creator-pp-example.png' alt="video creator photo profil"/>
 
-            <div className={styles.videoInfoDesc}>
-                <h4 className={styles.videoTitle}>{video.title}</h4>
-                <span className={styles.creatorName}>{video.creator}</span>
-                <span className={styles.videoViews}>&#x1F441; {formatViews(video.views)}</span>
-            </div>
-        </figcaption>
-    </figure>
+                <div className={styles.videoInfoDesc}>
+                    <h4 className={styles.videoTitle}>{video.title}</h4>
+                    <span className={styles.creatorName}>{video.creator}</span>
+                    <span className={styles.videoViews}>&#x1F441; {formatViews(video.views)}</span>
+                </div>
+            </figcaption>
+        </figure>
 }
 
 export default VideoCard;
