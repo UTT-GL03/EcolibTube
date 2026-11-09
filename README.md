@@ -157,8 +157,11 @@ Nous n'utilisont pas de framework mise à part React.
 
 Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du frontend (en dehors du visionnage de vidéo).
 
-|   | EcoIndex| Taille du DOM | Requêtes | Taille de la page (ko)
+| Version | EcoIndex | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|--------------:|---------:|---------------------:
-| Page de tendances  | 69 C 🟩 | 192 | 34 | 35000
+| v1.0.0  | 82 A 🟩 | 192 | 14 | 1000
+| v1.0.1  | 82 A 🟩 | 192 | 15 | 1000
 
 __Tab.4__: Évaluation de l'impact du prototype de la page des tendances
+
+La majorité de la taille de la page provient des miniatures des vidéos. C'est donc un type fichier qu'il faudra mieux compresser (éventuellement via un encodage plus efficace que jpeg comme le webp, jxl etc.).
