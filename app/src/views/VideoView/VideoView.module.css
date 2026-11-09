@@ -1,0 +1,20 @@
+.viewContainer {
+    padding: 4vh 5vw;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.videoPlayer {
+    width: 70%;
+    height: auto;
+}
+
+.commentsTitle {
+    align-self: flex-start;
+    margin-top: 2vh;
+
+    font-size: 1.5rem;
+}

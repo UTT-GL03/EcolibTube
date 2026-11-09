@@ -1,7 +1,8 @@
 import styles from './TrendingView.module.css';
 
-import VideoCard from '@/components/VideoCard';
 import videosData from '@/services/dummy-data/videos.json';
+
+import VideoCard from '@/components/VideoCard';
 
 
 function TrendingView() {

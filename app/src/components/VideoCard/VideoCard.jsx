@@ -1,7 +1,9 @@
 import styles from './VideoCard.module.css';
 
+import { useNavigate } from "react-router-dom";
+
 import videosData from '@/services/dummy-data/videos.json';
-import get_random_video_screenshot from '@/services/image';
+import { getRandomVideoScreenshot } from '@/services/mediaService';
 
 
 /**
@@ -14,6 +16,7 @@ import get_random_video_screenshot from '@/services/image';
 function VideoCard({idVideo}) {
     // FIELDS
     const video = videosData.video.find((item => item.id === idVideo));
+    const navigate = useNavigate();
 
     // FUNCTIONS
     function formatViews(views) {
@@ -26,10 +29,14 @@ function VideoCard({idVideo}) {
         return views;
     }
 
+    const goToVideo = () => {
+        navigate('/video');
+    }
+
 
     // RENDER
-    return <figure className={styles.videoCard}>
-        <img className={styles.videoScreenshot} src={get_random_video_screenshot()} alt="video screenshot"/>
+    return <figure className={styles.videoCard} onClick={goToVideo}>
+        <img className={styles.videoScreenshot} src={getRandomVideoScreenshot()} alt="video screenshot"/>
 
         <figcaption className={styles.videoCaption}>
             <img className={styles.creatorPhotoProfil} src='/assets/creator-pp-example.png' alt="video creator photo profil"/>

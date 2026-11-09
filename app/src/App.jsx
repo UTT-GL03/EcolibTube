@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 
 import BuilderView from '@/views/BuilderView';
 import TrendingView from '@/views/TrendingView';
+import VideoView from './views/VideoView';
 
 function App() {
   return <>
@@ -13,6 +14,8 @@ function App() {
       <Route path="/" element={<BuilderView />} /> {/* route only during dev for testing components, redirect to /trending in prod env */}
 
       <Route path="/trending" element={<TrendingView />} />
+
+      <Route path="/video" element={<VideoView />} />
 
       {/* TODO create custom error page */}
       <Route path="*" element={<h1>404 Error - Page not found</h1>} />
