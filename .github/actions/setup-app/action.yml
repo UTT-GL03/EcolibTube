@@ -1,0 +1,21 @@
+name: Setup App
+description: Download sources, set up Node.js and install dependencies
+
+runs:
+  using: "composite"
+  steps:
+    - name: Download sources
+      uses: actions/checkout@v5
+
+    - name: Set up NodeJS
+      uses: actions/setup-node@v6
+      with:
+        node-version: 24
+        cache: npm
+        cache-dependency-path: app/package-lock.json
+
+    - name: Install App dependencies
+      shell: bash
+      run: |
+        cd app
+        npm ci

@@ -1,0 +1,17 @@
+name: Start Docker
+description: Build App, Run docker container and wait for the starting
+
+runs:
+  using: "composite"
+  steps:
+    - name: Build App
+        run: |
+          cd app
+          npm run build
+      - name: Start Docker Container
+        run: |
+          docker compose up --detach
+      - name: Wait for App
+        uses: docker://benel/wait-for-response:1
+        with:
+          args: http://localhost/ 200 30000 500

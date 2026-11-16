@@ -1,0 +1,54 @@
+name: Build Localhost, Run Vite Tests, Generate GreenIT report
+on:
+  push:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-slim
+    steps:
+      - name: Setup Node and App
+        uses: ./.github/actions/setup-app
+      - name: Docker container
+        uses: ./.github/actions/start-docker
+      - name: Watch App initial payload
+        run: curl --silent localhost
+
+  unit_test:
+    needs: build
+    runs-on: ubuntu-slim
+    steps:
+      - name: Setup Node and App
+        uses: ./.github/actions/setup-app
+      - name: Install Playwright dependencies
+        run: |
+          cd app
+          npx playwright install --with-deps
+      - name: Run App Tests
+        run: |
+          cd app
+          npm run test
+
+  greenit:
+    needs: [build, unit_test]
+    runs-on: ubuntu-slim
+    steps:
+      - name: Setup Node and App
+        uses: ./.github/actions/setup-app
+      - name: Docker container
+        uses: ./.github/actions/start-docker
+      - name: Install GreenIT Analysis CLI
+        run: |
+          wget https://github.com/cnumr/GreenIT-Analysis-cli/archive/refs/heads/master.zip
+          unzip master.zip
+          cd GreenIT-Analysis-cli-master
+          npm install
+          npm link
+      - name: Run GreenIT Analysis CLI
+        run: |
+          greenit analyse --format html --ci greenit_scenarios/watch_video.yml
+      - name: Save results
+        uses: actions/upload-artifact@v4
+        with:
+          name: EcoIndex
+          path: WatchVideo.html
