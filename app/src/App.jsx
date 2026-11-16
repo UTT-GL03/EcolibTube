@@ -10,7 +10,7 @@ function App() {
   return <>
     <Header />
 
-    <Rouefiohdazizudaizuazdaihuzates>SALUUUUUUUUUUUUUUUUUUUUUUUUUUUUUT
+    <Routes>
       <Route path="/" element={<BuilderView />} /> {/* route only during dev for testing components, redirect to /trending in prod env */}
 
       <Route path="/trending" element={<TrendingView />} />
