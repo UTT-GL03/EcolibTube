@@ -5,7 +5,7 @@
       type: scroll
     - name: Choisir une vidéo
       type: click
-      element: main:nth-child(4)
+      element: main figure:nth-child(4)
       pageChange: true
       waitForNavigation: networkidle0
     - name: Lancer la vidéo
