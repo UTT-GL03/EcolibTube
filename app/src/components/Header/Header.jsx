@@ -30,7 +30,7 @@ function Header({}) {
         </form>
 
         <button className={styles.profilBtn}>
-            <img className={styles.profilPP} src='/assets/creator-pp-example.png' alt="Profile picture of the logged in user."/>
+            <img className={styles.profilPP} src='/assets/creator-pp-example.png' alt="Profile picture of the user that is logged in"/>
         </button>
     </header>
 }

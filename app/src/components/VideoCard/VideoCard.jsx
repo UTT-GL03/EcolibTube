@@ -34,10 +34,10 @@ function VideoCard({video}) {
 
     // RENDER
         return <figure className={styles.videoCard} onClick={goToVideo}>
-            <img className={styles.videoScreenshot} src={getRandomVideoScreenshot()} alt="video screenshot"/>
+            <img className={styles.videoScreenshot} src={getRandomVideoScreenshot()} alt="Video thumbnail"/>
 
             <figcaption className={styles.videoCaption}>
-                <img className={styles.creatorPhotoProfil} src={getRandomCreatorPP()} alt="video creator photo profil"/>
+                <img className={styles.creatorPhotoProfil} src={getRandomCreatorPP()} alt="Profile picture of the video creator"/>
 
                 <div className={styles.videoInfoDesc}>
                     <h4 className={styles.videoTitle}>{video.title}</h4>
