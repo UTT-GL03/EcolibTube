@@ -1,8 +1,6 @@
 - name: Watch a trending video
   url: http://localhost/trending
   actions:
-    - name: Consulter les vidéos en tendance
-      type: scroll
     - name: Choisir une vidéo
       type: click
       element: main figure:nth-child(4)
