@@ -1,13 +1,13 @@
 export function getRandomVideoScreenshot() {
-    const screenshot_id = Math.floor(Math.random() * 9) + 1;
+    const screenshot_id = Math.floor(Math.random() * 143) + 1;
 
     return `/assets/video_screenshots/video-screenshot-example_${screenshot_id}.jpg`;
 }
 
 export function getRandomCreatorPP() {
-    const creator_id = Math.floor(Math.random() * 10) + 1;
+    const creator_id = Math.floor(Math.random() * 180) + 1;
 
-    return `/assets/creators_pp/creator-pp-example_${creator_id}.png`;
+    return `/assets/creators_pp/channels_pp_${creator_id}.jpg`;
 }
 
 export function getRandomVideoURL() {

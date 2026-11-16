@@ -2,7 +2,7 @@ import styles from './VideoCard.module.css';
 
 import { useNavigate } from "react-router-dom";
 
-import { getRandomVideoScreenshot } from '@/services/mediaService';
+import { getRandomVideoScreenshot, getRandomCreatorPP } from '@/services/mediaService';
 
 
 /**
@@ -37,7 +37,7 @@ function VideoCard({video}) {
             <img className={styles.videoScreenshot} src={getRandomVideoScreenshot()} alt="video screenshot"/>
 
             <figcaption className={styles.videoCaption}>
-                <img className={styles.creatorPhotoProfil} src='/assets/creator-pp-example.png' alt="video creator photo profil"/>
+                <img className={styles.creatorPhotoProfil} src={getRandomCreatorPP()} alt="video creator photo profil"/>
 
                 <div className={styles.videoInfoDesc}>
                     <h4 className={styles.videoTitle}>{video.title}</h4>
