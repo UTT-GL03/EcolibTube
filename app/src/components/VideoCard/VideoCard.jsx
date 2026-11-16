@@ -28,7 +28,7 @@ function VideoCard({video}) {
     }
 
     const goToVideo = () => {
-        navigate('/video');
+        navigate(`/video/${video.id}`);
     }
 
 

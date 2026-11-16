@@ -7,11 +7,13 @@ export function getRandomVideoScreenshot() {
 export function getRandomCreatorPP() {
     const creator_id = Math.floor(Math.random() * 10) + 1;
 
-    return `/assets/creators_pp/creator-pp-example_${creator_id}.png`;
+    return `/assets/creator-pp-example.png`;
+    // return `/assets/creators_pp/creator-pp-example_${creator_id}.png`;
 }
 
 export function getRandomVideoURL() {
     const video_id = Math.floor(Math.random() * 10) + 1;
 
     return `/assets/videos/videos-example_1.mp4`;
+    // return `/assets/videos/videos-example_${video_id}.mp4`;
 }

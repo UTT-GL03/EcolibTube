@@ -15,7 +15,7 @@ function App() {
 
       <Route path="/trending" element={<TrendingView />} />
 
-      <Route path="/video" element={<VideoView />} />
+      <Route path="/video/:id" element={<VideoView />} />
 
       {/* TODO create custom error page */}
       <Route path="*" element={<h1>404 Error - Page not found</h1>} />
