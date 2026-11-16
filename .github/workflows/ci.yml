@@ -34,7 +34,7 @@ jobs:
           npm run test
 
   greenit:
-    needs: [build, unit_test]
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: Download sources

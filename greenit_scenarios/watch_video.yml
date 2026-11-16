@@ -1,4 +1,4 @@
-- name: Watch a trending
+- name: Watch a trending video
   url: http://localhost/trending
   actions:
     - name: Consulter les vidéos en tendance
@@ -7,10 +7,10 @@
       type: click
       element: main:nth-child(4)
       pageChange: true
-      waitForSelector: main figcaption
+      waitForNavigation: networkidle0
     - name: Lancer la vidéo
       type: click
       element: main > video
-      waitForSelector: main > video
+      waitForNavigation: networkidle0
     - name: Consulter la description et les commentaires
       type: scroll
