@@ -7,10 +7,10 @@
       type: click
       element: main figure:nth-child(4)
       pageChange: true
-      waitForNavigation: networkidle0
+      waitForNavigation: networkidle2
     - name: Lancer la vidéo
       type: click
       element: main > video
-      waitForNavigation: networkidle0
+      waitForNavigation: networkidle2
     - name: Consulter la description et les commentaires
       type: scroll
