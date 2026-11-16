@@ -10,6 +10,7 @@ runs:
           cd app
           npm run build
     - name: Start Docker Container
+      shell: bash
       run: |
         docker compose up --detach
     - name: Wait for App
