@@ -165,3 +165,11 @@ Dans l'état actuel du prototype, il est possible d'avoir une première idée de
 __Tab.4__: Évaluation de l'impact du prototype de la page des tendances
 
 La majorité de la taille de la page provient des miniatures des vidéos. C'est donc un type fichier qu'il faudra mieux compresser (éventuellement via un encodage plus efficace que jpeg comme le webp, jxl etc.).
+
+## Mesures de la consommation énergétique lors du passage à l'échelle
+
+Nous pouvons simuler les effets du "passage à l'échelle". 
+
+Dans notre cas et dans le cadre des fonctionnalités envisagées, l'augmentation de la quantité des données à traiter viendra principalement de l'augmentation du nombre de créateurs de contenu et du nombre de personnes qui regardent ces contenus.
+
+L'augmentation du volume de vidéo dépend du nombre de créateurs de contenu, ainsi que de leur fréquence de création de vidéo. Ainsi, pour un nombre de créateur qui augmentent (quel que soit leur fréquence), la progression est quadratique (voire même exponentielle si la popularité de la plateforme augmente) : à raison de 30 nouveaux créateurs par mois, faisant chacun quatre vidéo par mois (soit une vidéo par semaine), la base de données sera de 2520 vidéos au bout de 6 mois (et ainsi de suite). (30×4) × (n(n+1)/2) avec n étant le nombre de mois. n(n+1)/2 est proportionnel à n².
