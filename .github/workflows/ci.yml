@@ -5,7 +5,7 @@ on:
 jobs:
 
   build:
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     steps:
       - name: Download sources
         uses: actions/checkout@v5
@@ -18,7 +18,7 @@ jobs:
 
   unit_test:
     needs: build
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     steps:
       - name: Download sources
         uses: actions/checkout@v5
@@ -35,7 +35,7 @@ jobs:
 
   greenit:
     needs: [build, unit_test]
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     steps:
       - name: Download sources
         uses: actions/checkout@v5
