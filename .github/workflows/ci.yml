@@ -34,13 +34,16 @@ jobs:
           npm run test
 
   greenit:
-    needs: [build]
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Download sources
         uses: actions/checkout@v5
       - name: Setup Node and App
         uses: ./.github/actions/setup-app
+      - name: Generate sample data
+        run: |
+          npx --yes dummy-json dummy-data/video_sample.hbs > app/public/dummy-data/videos.json
       - name: Docker container
         uses: ./.github/actions/start-docker
       - name: Install GreenIT Analysis CLI
