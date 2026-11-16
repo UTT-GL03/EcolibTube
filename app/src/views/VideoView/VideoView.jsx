@@ -18,9 +18,7 @@ function VideoView() {
         fetch('/dummy-data/videos.json')
             .then(data => data.json())
             .then(data => setVideoData(data.video.filter((currentVideo => currentVideo.id === id))[0]));
-        
-        console.log(videoData);
-    });
+    }, []);
 
     // RENDER
     return <main className={styles.viewContainer}>
