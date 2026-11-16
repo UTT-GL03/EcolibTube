@@ -9,6 +9,11 @@ import ALERT_TYPES from './AlertTypes';
 
 describe('Alert dialog component', () => {
 
+    // TEMP GITHUB ACTION TEST
+    it('action test', () => {
+        expect(true).toBeFalsy();
+    });
+
     // Render testing for title and text
     it('should render the alert with correct title and text', () => {
         render(
