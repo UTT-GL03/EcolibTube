@@ -48,13 +48,13 @@ jobs:
           wget https://github.com/cnumr/GreenIT-Analysis-cli/archive/refs/heads/master.zip
           unzip master.zip
           cd GreenIT-Analysis-cli-master
-          npm install
+          npm ci
           npm link
       - name: Run GreenIT Analysis CLI
         run: |
-          greenit analyse --format html --ci --headless true greenit_scenarios/watch_video.yml
+          greenit analyse --format html --ci greenit_scenarios/watch_video.yml
       - name: Save results
         uses: actions/upload-artifact@v4
         with:
           name: EcoIndex
-          path: WatchVideo.html
+          path: Watchatrendingvideo.html
