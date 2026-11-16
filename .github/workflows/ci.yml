@@ -7,6 +7,8 @@ jobs:
   build:
     runs-on: ubuntu-slim
     steps:
+      - name: Download sources
+        uses: actions/checkout@v5
       - name: Setup Node and App
         uses: ./.github/actions/setup-app
       - name: Docker container
@@ -18,8 +20,10 @@ jobs:
     needs: build
     runs-on: ubuntu-slim
     steps:
+      - name: Download sources
+        uses: actions/checkout@v5
       - name: Setup Node and App
-        uses: ./.github/actions/setup-app
+        uses: /.github/actions/setup-app
       - name: Install Playwright dependencies
         run: |
           cd app
@@ -33,10 +37,12 @@ jobs:
     needs: [build, unit_test]
     runs-on: ubuntu-slim
     steps:
+      - name: Download sources
+        uses: actions/checkout@v5
       - name: Setup Node and App
-        uses: ./.github/actions/setup-app
+        uses: /.github/actions/setup-app
       - name: Docker container
-        uses: ./.github/actions/start-docker
+        uses: /.github/actions/start-docker
       - name: Install GreenIT Analysis CLI
         run: |
           wget https://github.com/cnumr/GreenIT-Analysis-cli/archive/refs/heads/master.zip
