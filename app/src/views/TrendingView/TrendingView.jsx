@@ -16,7 +16,7 @@ function TrendingView() {
 
     // RENDER
     return <main className={styles.viewContainer}>
-        {videosData.map((video) => (
+        {videosData.map(video => (
             <VideoCard key={video.id} video={video}/>
         ))}
     </main>

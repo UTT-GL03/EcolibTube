@@ -16,6 +16,7 @@
 .videoCreator {
     width: 8%;
     height: auto;
+    border-radius: 50%;
 }
 
 .descBottomContainer {
