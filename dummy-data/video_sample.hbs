@@ -1,8 +1,9 @@
 {
-  "video": [
+  "docs": [
     {{#repeat 2000}}
     {
-      "id": "{{guid}}",
+      "_id": "{{@Index}}",
+      "type": "video",
       "title": "{{lorem min=3 max=20}}",
       "issued": "{{date '2006' '2027' 'YYYY-MM-DD hh:mm'}}",
       "creator": "{{firstName}} {{lastName}}",

@@ -1,8 +1,9 @@
 {
-  "comment": [
+  "docs": [
     {{#repeat min=20 max=30}}
     {
-      "id": "{{guid}}",
+      "_id": "{{@Index}}",
+      "type": "comment",
       "creator": "{{firstName}} {{lastName}}",
       "issued": "{{date '2006' '2027' 'YYYY-MM-DD hh:mm'}}",
       "content": "{{#repeat min=1 max=15 comma=false}}{{lorem min=5 max=120}}\n\n{{/repeat}}",
