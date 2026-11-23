@@ -1,6 +1,17 @@
 services:
 
+  couchdb:
+    image: couchdb:3
+    ports:
+      - 5984:5984
+    environment:
+      - COUCHDB_USER
+      - COUCHDB_PASSWORD
+      
   static_hosting:
+    depends_on:
+        couch_db:
+            condition: service_healthy
     image: nginx
     volumes:
       - ./app/dist:/usr/share/nginx/html:ro

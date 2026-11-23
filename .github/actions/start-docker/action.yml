@@ -12,8 +12,14 @@ runs:
     - name: Start Docker Container
       shell: bash
       run: |
+        export COUCHDB_USER="ADMIN"
+        export COUCHDB_PASSWORD="ADMIN"
         docker compose up --detach
     - name: Wait for App
       uses: docker://benel/wait-for-response:1
       with:
         args: http://localhost/ 200 30000 500
+    - name: Wait for DB
+      uses: docker://benel/wait-for-response:1
+      with:
+        args: http://localhost:5984/ 200 30000 500
