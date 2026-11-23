@@ -1,0 +1,7 @@
+baseURL: http://localhost
+projectName: EcolibTube
+scenarios:
+  - name: Consulter une vidéo
+    path: ./greenit_scenarios/watch_video.js
+containers:
+  - ecolibtube-static_hosting-1
