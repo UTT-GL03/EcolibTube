@@ -31,6 +31,7 @@ runs:
         curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' http://localhost:5984/:5984/_node/nonode@nohost/_config/cors/origins --data '"*"'
         curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' http://localhost:5984/:5984/ecolibtube
         curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' http://localhost:5984/ecolibtube/_security --data '{"members":{"roles":[]},"admins":{"roles":["_admin"]}}'
+      shell: bash
 
     - name: Generate sample data
       run: |
