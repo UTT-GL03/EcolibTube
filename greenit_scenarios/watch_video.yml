@@ -10,5 +10,3 @@
       type: click
       element: main > video
       waitForSelector: main > video
-    - name: Consulter la description et les commentaires
-      type: scroll

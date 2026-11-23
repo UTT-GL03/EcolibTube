@@ -15,6 +15,7 @@ runs:
         export COUCHDB_USER="ADMIN"
         export COUCHDB_PASSWORD="ADMIN"
         docker compose up --detach
+
     - name: Wait for App
       uses: docker://benel/wait-for-response:1
       with:
@@ -23,3 +24,13 @@ runs:
       uses: docker://benel/wait-for-response:1
       with:
         args: http://localhost:5984/ 200 30000 500
+
+    - name: Generate sample data
+      run: |
+        npx --yes dummy-json dummy-data/video_sample.hbs > app/public/dummy-data/videos.json
+        npx --yes dummy-json dummy-data/comment_sample.hbs > app/public/dummy-data/comments.json
+    - name: Upload samples
+      run: |
+        curl -X POST http://localhost:5984/ecolibtube/_bulk_docs -H "Content-Type: application/json" -d app/public/dummy-data/videos.json
+        curl -X POST http://localhost:5984/ecolibtube/_bulk_docs -H "Content-Type: application/json" -d app/public/dummy-data/comments.json
+      shell: bash
