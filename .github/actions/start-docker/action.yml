@@ -27,11 +27,10 @@ runs:
 
     - name: Create DB
       run: |
-        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' db:5984/:5984/_node/nonode@nohost/_config/chttpd/enable_cors --data '"true"'
-        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' db:5984/:5984/_node/nonode@nohost/_config/cors/origins --data '"*"'
-        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' db:5984/:5984/ecolibtube
-        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' db:5984/ecolibtube/_security --data '{"members":{"roles":[]},"admins":{"roles":["_admin"]}}'
-      shell: bash
+        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' http://localhost:5984/:5984/_node/nonode@nohost/_config/chttpd/enable_cors --data '"true"'
+        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' http://localhost:5984/:5984/_node/nonode@nohost/_config/cors/origins --data '"*"'
+        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' http://localhost:5984/:5984/ecolibtube
+        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' http://localhost:5984/ecolibtube/_security --data '{"members":{"roles":[]},"admins":{"roles":["_admin"]}}'
 
     - name: Generate sample data
       run: |
@@ -40,6 +39,6 @@ runs:
       shell: bash
     - name: Upload samples
       run: |
-        curl -X POST db:5984/ecolibtube/_bulk_docs -H "Content-Type: application/json" -d app/public/dummy-data/videos.json
-        curl -X POST db:5984/ecolibtube/_bulk_docs -H "Content-Type: application/json" -d app/public/dummy-data/comments.json
+        curl -X POST http://localhost:5984/ecolibtube/_bulk_docs -H "Content-Type: application/json" -d app/public/dummy-data/videos.json
+        curl -X POST http://localhost:5984/ecolibtube/_bulk_docs -H "Content-Type: application/json" -d app/public/dummy-data/comments.json
       shell: bash
