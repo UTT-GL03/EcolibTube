@@ -27,11 +27,10 @@ runs:
 
     - name: Create DB
       run: |
-        alias put="curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}'"
-        put db:5984/:5984/_node/nonode@nohost/_config/chttpd/enable_cors --data '"true"'
-        put db:5984/:5984/_node/nonode@nohost/_config/cors/origins --data '"*"'
-        put db:5984/:5984/ecolibtube
-        put db:5984/ecolibtube/_security --data '{"members":{"roles":[]},"admins":{"roles":["_admin"]}}'
+        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' db:5984/:5984/_node/nonode@nohost/_config/chttpd/enable_cors --data '"true"'
+        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' db:5984/:5984/_node/nonode@nohost/_config/cors/origins --data '"*"'
+        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' db:5984/:5984/ecolibtube
+        curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}' db:5984/ecolibtube/_security --data '{"members":{"roles":[]},"admins":{"roles":["_admin"]}}'
       shell: bash
 
     - name: Generate sample data
