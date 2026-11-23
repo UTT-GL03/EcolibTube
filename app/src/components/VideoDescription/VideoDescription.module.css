@@ -12,22 +12,16 @@
     width: 100%;
 }
 
-
-.videoCreator {
-    width: 8%;
-    height: auto;
-    border-radius: 50%;
+.videoCreatorContainer {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
 }
 
-.descBottomContainer {
-    padding: 1vh 1vw;
-    width: 100%;
-
-    display: flex;
-    flex-direction: column;
-
-    background-color: var(--bg-light-color);
-    border-radius: 1vw;
+.videoCreator {
+    width: max(36px, 5vw);
+    height: auto;
+    border-radius: 50%;
 }
 
 .likesBtnContainer {
@@ -46,4 +40,52 @@
 
 .likeBtn:hover, .dislikeBtn:hover {
     transform: scale(1.1);
+}
+
+.descBottomContainer {
+    padding: 1vh 1vw;
+    width: 100%;
+
+    background-color: var(--bg-light-color);
+    border-radius: 1vw;
+}
+
+.descBottomContainer > summary {
+    cursor: pointer;
+    position: relative;
+    anchor-name: --summary;
+    
+    display: flex;
+    flex-direction: column;
+
+    &::marker {
+        content: "";
+    }
+
+    &::before, &::after {
+        content: "";
+        border-block-start: 3px solid var(--primary-color);
+        height: 0;
+        width: 1rem;
+        
+        inset-block-start: 1.5vh;
+        inset-inline-end: 0;
+        
+        position: absolute;
+        position-anchor: --summary;
+        position-area: top end;
+    }
+  
+    &::after {
+        transform: rotate(90deg);
+        transform-origin: 50%;
+    }
+}
+
+.descBottomContainer:open > summary::after {
+    display: none
+}
+
+.descBottomContainer:open > summary > .descText {
+    display: none;
 }

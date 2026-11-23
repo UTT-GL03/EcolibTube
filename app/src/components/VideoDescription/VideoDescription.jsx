@@ -19,7 +19,11 @@ function VideoDescription({video}) {
     return <div className={styles.descContainer}>
         <h2 className={styles.videoTitle}>{video.title}</h2>
 
-        <img className={styles.videoCreator} src={getRandomCreatorPP()} alt="Creator photo profil"></img>
+        <figure className={styles.videoCreatorContainer}>
+            <img className={styles.videoCreator} src={getRandomCreatorPP()} alt="Creator photo profil"/>
+            <figcaption className={styles.videoCreatorText}>{video.creator}</figcaption>
+        </figure>
+
         <div className={styles.likesBtnContainer}>
             <button className={styles.likeBtn}>
                 <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="32" height="32">
@@ -33,11 +37,15 @@ function VideoDescription({video}) {
             </button>
         </div>
         
-        <div className={styles.descBottomContainer}>
-            <span className={styles.videoViews}><b>Views : </b> {formatViews(video.views)} &#x1F441;</span>
-            <span className={styles.videoDate}><b>Release Date : </b> {video.issued}</span>
+        <details className={styles.descBottomContainer}>
+            <summary>
+                <span className={styles.videoViews}><b>Views : </b> {formatViews(video.views)} &#x1F441;</span>
+                <span className={styles.videoDate}><b>Release Date : </b> {video.issued}</span>
+                <p className={styles.descText}><b>Description : </b> {video.description != undefined ? video.description.substring(0, 560) : ""} ...</p>
+            </summary>
+
             <p className={styles.descText}><b>Description : </b> {video.description}</p>
-        </div>
+        </details>
     </div>
 }
 
