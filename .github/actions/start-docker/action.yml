@@ -29,6 +29,7 @@ runs:
       run: |
         npx --yes dummy-json dummy-data/video_sample.hbs > app/public/dummy-data/videos.json
         npx --yes dummy-json dummy-data/comment_sample.hbs > app/public/dummy-data/comments.json
+      shell: bash
     - name: Upload samples
       run: |
         curl -X POST http://localhost:5984/ecolibtube/_bulk_docs -H "Content-Type: application/json" -d app/public/dummy-data/videos.json
