@@ -25,6 +25,15 @@ runs:
       with:
         args: http://localhost:5984/ 200 30000 500
 
+    - name: Create DB
+      run: |
+        alias put="curl -X PUT -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}'"
+        put db:5984/:5984/_node/nonode@nohost/_config/chttpd/enable_cors --data '"true"'
+        put db:5984/:5984/_node/nonode@nohost/_config/cors/origins --data '"*"'
+        put db:5984/:5984/ecolibtube
+        put db:5984/ecolibtube/_security --data '{"members":{"roles":[]},"admins":{"roles":["_admin"]}}'
+      shell: bash
+
     - name: Generate sample data
       run: |
         npx --yes dummy-json dummy-data/video_sample.hbs > app/public/dummy-data/videos.json
@@ -32,6 +41,6 @@ runs:
       shell: bash
     - name: Upload samples
       run: |
-        curl -X POST http://localhost:5984/ecolibtube/_bulk_docs -H "Content-Type: application/json" -d app/public/dummy-data/videos.json
-        curl -X POST http://localhost:5984/ecolibtube/_bulk_docs -H "Content-Type: application/json" -d app/public/dummy-data/comments.json
+        curl -X POST db:5984/ecolibtube/_bulk_docs -H "Content-Type: application/json" -d app/public/dummy-data/videos.json
+        curl -X POST db:5984/ecolibtube/_bulk_docs -H "Content-Type: application/json" -d app/public/dummy-data/comments.json
       shell: bash
