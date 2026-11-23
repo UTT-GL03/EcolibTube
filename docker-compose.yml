@@ -9,9 +9,6 @@ services:
       - COUCHDB_PASSWORD
       
   static_hosting:
-    depends_on:
-        couch_db:
-            condition: service_healthy
     image: nginx
     volumes:
       - ./app/dist:/usr/share/nginx/html:ro
